@@ -29,9 +29,8 @@ func (c *Context) PostForm(key string) string {
   return c.Req.FormValue(key)
 }
 
-func (c *Context) Query(code int) {
-  c.StatusCode = code
-  c.Writer.WriteHeader(code)
+func (c *Context) Query(key string) string {
+  return c.Req.URL.Query().Get(key)
 }
 
 func (c *Context) Status(code int) {
