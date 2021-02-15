@@ -10,6 +10,6 @@ jobs:
       - name: Setup go
         uses: actions/setup-go@v2
       - name: Run linter
-        uses: golangci/golangci-lint-action@v2
+        uses: golangci/golangci-lint-action@v2.4.0
         with:
           version: v1.29
